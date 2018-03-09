@@ -1,1 +1,7 @@
 /DMTExplore.log
+/target/archive-tmp/
+/target/generated-sources/
+/target/maven-archiver/
+/target/maven-status/
+/target/classes/
+/target/DMTExplore.log
