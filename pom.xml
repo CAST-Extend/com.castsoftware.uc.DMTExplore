@@ -60,19 +60,8 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-<!-- 			
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-					<archive>
-						<manifest>
-							<mainClass>com.castsoftware.dmtexplore</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -81,8 +70,33 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.castsoftware.dmtexplore.DmtExplore</mainClass>
+							<addDefaultImplementationEntries>
+								true
+							</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<Class-Path>.</Class-Path>
+						</manifestEntries>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<finalName>DmtExplore</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
 			</plugin>
- -->			
+
+
+
+			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <configuration> 
+				<descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> </descriptorRefs> 
+				<archive> <manifest> <mainClass>com.castsoftware.dmtexplore</mainClass> </manifest> 
+				</archive> </configuration> <executions> <execution> <phase>package</phase> 
+				<goals> <goal>single</goal> </goals> </execution> </executions> </plugin> -->
 		</plugins>
 	</build>
 
