@@ -1,5 +1,6 @@
 package com.castsoftware.dmtexplore.data;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -76,12 +77,14 @@ public class DeliveryData implements Comparable
 
 	public String toString()
 	{
-		
+	  String pattern = "yyyy-MM-dd HH:mm:ss";
+	  SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+	  
 		return new StringBuffer()
 				.append(deliveryName).append("\t")
 		        .append(deliveryGuid).append("\t")
-				.append(deliveryDate).append("\t")
-				.append(deliveryStatus)
+				.append(simpleDateFormat.format(deliveryDate)).append("\t")
+				.append(deliveryStatus).append("\t")
 				.toString();
 
 	}	
